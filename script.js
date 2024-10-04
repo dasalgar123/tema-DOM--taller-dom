@@ -1,3 +1,14 @@
+function inicio() {
+    // Oculta el formulario
+    document.getElementById('formulario-registro').style.display = 'none'; 
+    
+    // Obtiene el elemento de resultado
+    const resultado = document.getElementById('resultado'); 
+    resultado.style.display = 'block'; // Muestra el elemento de resultado
+    
+    // Muestra la imagen
+    document.getElementById('mi-imagen').style.display = 'block'; // Muestra la imagen
+}
 
 
 
@@ -19,6 +30,7 @@ function validarFormularioRegistro() {
    mensaje.textContent = 'Registro exitoso!';
     mensaje.style.color = 'green'; // Aquí puedes agregar más validaciones, como el formato del email, etc.
    
+    // Aquí puedes añadir el código para procesar el registro, como enviar los datos a un servidor
 }
 
 // Función para limpiar los campos del formulario
