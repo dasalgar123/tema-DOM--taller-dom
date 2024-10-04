@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM JavaScript</title>
+    <link rel="stylesheet"  href="styles_oscuro.css">
+</head>
+<body>
+    <head>
+        <h1>Ejercicios DOM JavaScript</h1>
+        
+    </head>
+    <nav>
+        <button id="btn_primario" onclick="mostrarEjercicio(2)">Ejercicio 1</button>
+        <button id="btn_segundario" onclick="mostrarEjercicio(3)">Ejercicio 2</button>
+        <button id="btn_terciario" onclick="mostrarEjercicio(4)">Ejercicio 3</button>
+    </nav>
+    <div>
+     
+    </div>
+
+    <div id="ejercicio1" class="ejercicio">
+        <h2>Validación de Formulario</h2>
+        <form id="formulario-registro">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button id="btn_Registrar" type="button" onclick="validarFormularioRegistro()">Registrar</button>
+            <button id="btn_limpiar" type="button" onclick="btn_limpiar_campos()">limpiar</button>
+        </form>
+        <div id="mensaje-registro"></div>
+    </div>
+
+    <div id="ejercicio2" class="ejercicio">
+        <h2>Lista de Tareas</h2>
+        <input type="text" id="nueva-tarea" placeholder="Nueva tarea">
+        <button id="AgregarTarea"  onclick="manejarListaTareas()">Agregar Tarea</button>
+        <ul id="lista-tareas"></ul>
+    </div>
+
+    <div id="ejercicio3" class="ejercicio">
+        <h2>Búsqueda en Tabla de concepto de DOM</h2>
+        <input type="text" id="termino-busqueda" placeholder="Término de búsqueda">
+        <button id="btn_buscar" onclick="buscarEnTabla()">Buscar</button>
+        <button id="btn_limpiar" onclick="limpiarBusqueda()">limpiar</button><br>
+        <div id="resultado-busqueda"></div>
+        <table id="tabla-diccionario">
+            <tr>
+                <th>Palabra</th>
+                <th>Definición</th>
+            </tr>
+            <tr>
+                <td>DOM</td>
+                <td>Modelo de Objetos del Documento; una representación del documento HTML en forma de objeto que permite su manipulación a través de JavaScript.</td>
+            </tr>
+            <tr>
+                <td>Elemento</td>
+                <td>Una parte individual de un documento HTML, como un <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, o <code>&lt;h1&gt;</code>, que puede ser manipulado mediante JavaScript.</td>
+            </tr>
+            <tr>
+                <td>Etiqueta</td>
+                <td>Una instrucción en el código HTML que define un elemento, como <code>&lt;a&gt;</code> o <code>&lt;img&gt;</code>.</td>
+            </tr>
+            <tr>
+                <td>Nodo</td>
+                <td>Cualquier objeto en el DOM, incluyendo elementos, atributos y texto. Los nodos son las unidades básicas del DOM.</td>
+            </tr>
+            <tr>
+                <td>Texto</td>
+                <td>El contenido textual de un nodo, que puede ser accesible y modificable mediante JavaScript, utilizando propiedades como <code>textContent</code>.</td>
+            </tr>
+            <tr>
+                <td>Selector</td>
+                <td>Método para seleccionar elementos en el DOM, usado en métodos como <code>document.querySelector()</code> y <code>document.getElementById()</code>.</td>
+            </tr>
+            <tr>
+                <td>Evento</td>
+                <td>Una acción que ocurre en el documento, como un clic o un movimiento del ratón, que se puede manejar con JavaScript.</td>
+            </tr>
+            <tr>
+                <td>Escucha de eventos</td>
+                <td>Función que se ejecuta cuando ocurre un evento en un elemento del DOM, usando <code>element.addEventListener()</code>.</td>
+            </tr>
+            <tr>
+                <td>Modificar</td>
+                <td>Cambiar las propiedades o el contenido de un elemento del DOM usando JavaScript, como <code>element.textContent</code> o <code>element.style</code>.</td>
+            </tr>
+            <tr>
+                <td>Crear</td>
+                <td>Generar nuevos elementos en el DOM usando <code>document.createElement()</code>.</td>
+            </tr>
+            <tr>
+                <td>Eliminar</td>
+                <td>Borrar elementos del DOM utilizando métodos como <code>element.remove()</code> o <code>parentNode.removeChild()</code>.</td>
+            </tr>
+            <tr>
+                <td>Clonar</td>
+                <td>Crear una copia de un elemento existente en el DOM usando <code>element.cloneNode()</code>.</td>
+            </tr>
+            <tr>
+                <td>Traversing</td>
+                <td>Navegar a través de los nodos del DOM utilizando propiedades como <code>parentNode</code>, <code>childNodes</code> y <code>nextSibling</code>.</td>
+            </tr>
+            <tr>
+                <td>InnerHTML</td>
+                <td>Propiedad que permite obtener o establecer el contenido HTML de un elemento, incluyendo sus etiquetas.</td>
+            </tr>
+            <tr>
+                <td>Style</td>
+                <td>Propiedad que permite acceder y modificar el estilo CSS de un elemento del DOM.</td>
+            </tr>
+            <tr>
+                <td>JSON</td>
+                <td>Formato de intercambio de datos usado comúnmente en combinación con el DOM para cargar datos en la página.</td>
+            </tr>
+            <tr>
+                <td>Atributo</td>
+                <td>Una propiedad de un elemento HTML que proporciona información adicional, como <code>src</code> en una etiqueta <code>&lt;img&gt;</code>.</td>
+            </tr>
+        </table>
+        
+        
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer style="text-align: center; padding: 20px; background-color: #333; color: white; border-top: 3px solid #007bff;">
+    <p style="font-size: 1.2rem; margin: 10px 0;">&copy; 2024 </p>
+    <p style="font-size: 1.2rem; margin: 10px 0;"><strong>DS >></strong></p>
+    <p style="font-size: 1rem; margin: 10px 0;">&copy; Derechos de diseños y programación de software garantizados y de calidad</p>
+    <p style="margin: 10px 0;">Correo: <a href="mailto:dasalgar123@gmail.com" style="color: #007bff; text-decoration: none;">dasalgar123@gmail.com</a></p>
+</footer>
+
+
+</html>
